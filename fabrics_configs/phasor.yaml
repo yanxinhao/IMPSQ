@@ -1,0 +1,22 @@
+Image:
+  using_mlp: True
+  mode: "phasor"
+
+MLP:
+  in_features: 8
+  out_features: 3
+  nonlinearity: "relu"
+  num_hidden_layers: 2
+  hidden_features: 256
+  outermost_linear: True
+  # weight_init: None
+
+Encoding:
+  dim_feat: 8
+  gauss_variance: 0 #1.e-3
+  resolutions: [280,280]
+  num_comp_log: 6
+  TV_weight: 0 #1 #.e+1
+
+Solver:
+ lr: 1.e-4
